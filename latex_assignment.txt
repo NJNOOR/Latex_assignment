@@ -1,0 +1,296 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{graphicx} % For including images
+\usepackage{amsmath} % For math symbols and environments
+\usepackage{amsfonts} % For mathematical fonts
+\usepackage{xcolor} % For colored text
+\usepackage{natbib} % For bibliography styles
+\usepackage{subcaption}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colortbl} % For coloring tables
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tcolorbox}  % For colored boxes
+\usepackage{hyperref} % For clickable links in TOC
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70,
+    % filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+
+% \documentclass[a4paper,12pt]{report}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+
+\begin{document}
+
+% Center the entire page
+\begin{titlepage}
+    \centering
+    % Add your university logo here
+    \includegraphics[width=10cm]{download.png} % Replace "university_logo.png" with the actual file name
+    \vspace{1cm}
+    
+    % University and Department
+    % \textbf{\Large [Your University Name]}\\
+   
+
+\textbf{\large \fontsize{19pt}{16pt}\selectfont \textcolor{purple!70}{Department of Computer Science \& Engineering}}\\
+    \vspace{2cm}
+    
+    % Assignment Title
+    \textbf{ \fontsize{20pt}{15pt}\selectfont Assignment on LaTeX}\\
+    \vspace{1cm}
+    {\large Course Name:Technical Writing and Presentation}\\
+     \vspace{0.3cm}
+     {\large Course Code: CSE - 111}\\
+     \vspace{1.5cm}
+    
+    % Student Information
+    \textbf{\large \fontsize{15pt}{20pt}\selectfont Submitted By:}\\
+     \vspace{0.3cm}
+    {\large Naznin Jahan Noor}\\
+     \vspace{0.3cm}
+    {\large ID:213-115-018}\\
+    \vspace{1.5cm}
+    
+    % Submitted To
+    \textbf{\large \fontsize{15pt}{20pt}\selectfont Submitted To:}\\
+     \vspace{0.3cm}
+    {\large Md.Mustaq Shahriyar Rafee}\\
+    \vspace{1.2cm}
+    
+    % Date
+    \textbf{\large Date: [21-04-24]}\\
+    \vspace{2cm}
+\end{titlepage}
+
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+
+\chapter{\textcolor{cyan}{Introduction}}
+
+% \textbf{\textcolor{brown}{\huge L A T E X}}
+
+\noindent
+{\LARGE \textbf{L}\raisebox{0.3ex}{\textcolor{black}{\textbf{A}}}\textcolor{black}{\textbf{T}}\raisebox{-0.5ex}{\textcolor{black}{\textbf{E}}}\textcolor{black}{\textbf{X}}}
+\\
+
+\noindent
+ \textcolor{purple}{Latex}(pronounced lay-tek) is a document preparation system for producing
+professional-looking documents, it is not a word processor. It is particularly suited to producing long, structured documents, and is very good at type-setting equations. It is available as free software for most operating systems.
+LATEX is based on TEX, a typesetting system designed by Donald Knuth in
+1978 for high quality digital typesetting. TEX is a low-level language that
+computers can work with, but most people would find difficult to use; so
+LATEX has been developed to make it easier.
+\\
+\\
+If you are used to producing documents with Microsoft Word, you will find
+that LATEX is a very different style of working. Microsoft Word is ‘What You
+See Is What You Get’ (WYSIWYG), this means that you see how the final
+document will look as you are typing. When working in this way you will
+probably make changes to the document’s appearance (such as line spacing,
+headings, page breaks) as you type. With LATEX you do not see how the final
+document will look while you are typing it — this allows you to concentrate
+on the content rather than appearance.
+
+\chapter{\textcolor{cyan}{Core Content}}
+\section{The Basic of Latex}
+
+LaTeX is a powerful typesetting system used primarily for technical and scientific documents. Unlike word processors, LaTeX separates content creation from formatting, allowing authors to focus on the text while LaTeX manages the layout and style. Here are some foundational concepts that help new users get started with LaTeX:
+
+\section{Document Structure}
+
+A LaTeX document typically begins with a preamble where you set up the document class, load packages, and define any necessary settings. The preamble might look like this:
+\begin{verbatim}
+    \documentclass{report}
+    \usepackage{graphicx} % For including images
+\end{verbatim}    
+After the preamble, the document content is written within the `document` environment. The basic structure looks like this:    
+\begin{verbatim}
+    \begin{document}
+    % Content goes here
+    \end{document}
+\end{verbatim}
+
+\subsection{Formatting Text}
+
+LaTeX provides several commands for text formatting. Some common commands include:
+\begin{itemize}
+    \item \textbf{Bold text}
+    \item \textit{Italic Text}
+    \item \underline{underline text}
+\end{itemize}
+You can combine these commands for more complex formatting, such as `\textbf{\textit{bold and italic}}`.
+
+\subsection{Creating Sections and Subsections}
+In LaTeX, you can organize content using sections, subsections, and subsubsections. Each level of sectioning is automatically numbered and added to the table of contents (if you include one):
+
+\begin{verbatim}
+\section{Main Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+\end{verbatim}
+
+\subsection{Mathematical Expressions}
+One of LaTeX's most powerful features is its ability to typeset complex mathematical equations. Math expressions are placed between dollar signs for inline math, or in a dedicated `equation` environment for display equations:
+
+\begin{verbatim}
+inline math: (E = mc^2 )
+display math :
+\begin{equation}
+  a^2 + b^2 = c^2
+\end{equation}  
+\end{verbatim}
+
+\subsection{Including image and Figures}
+To insert images, use the `graphicx` package and the `figure` environment:
+\begin{verbatim}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{image.png}
+    \caption{An example image}
+    \label{fig:example}
+\end{figure}
+\end{verbatim}
+These are the basics of working with LaTeX. By mastering these elements, you can create well-structured, professional-looking documents that are easy to read and navigate.
+
+\section{Advance Features}
+\subsection{Text Formatting, Lists, and Quotations}
+
+Here are some ways to format text:
+\textsc{small Caps Text}, \textsl{Slanted Text}, and \textbf{\textit{Italic and Bold}} for emphasis.
+
+\subsection{Why LaTeX is Awesome}
+\begin{enumerate}
+    \item High-quality typesetting
+    \item Efficient management of references
+    \item Strong support for complex equations and formatting
+\end{enumerate}
+
+\subsection{Core Features}
+\begin{itemize}
+    \item \textbf{Ease of Use}
+    \begin{itemize}
+        \item Simple document structure
+        \item Easy to write and edit content
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{High quality output}
+    \begin{itemize}
+        \item Simple document structure
+        \item Easy to write and edit content
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Customization}
+    \begin{itemize}
+        \item Simple document structure
+        \item Easy to write and edit content
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Quote}
+\end{itemize}
+
+\begin{center}
+\begin{tcolorbox}[colframe=blue!40, colback=green!20, coltitle=black, sharp corners=all, width=0.8\textwidth, boxrule=1mm, halign=center]
+\begin{quote}
+    \textit{"Good design is as little design as possible."} \\
+    — Dieter Rams
+\end{quote}
+\end{tcolorbox}
+\end{center}
+\newpage
+\subsection{Table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+    \hline
+    \rowcolor{orange!60} \textbf{Features} & \textbf{Pros} & \textbf{Cons}\\
+    \hline
+    Ease of Use & Simple to learn and use & Limited functionality  \\
+    \hline
+    High-Quality Output & Produces professional documents & Requires time to learn \\
+    \hline
+    Customization & Highly customizable with packages & Can be complex for simple tasks \\
+    \hline
+    \end{tabular}
+    \caption{Sample Table Showing Features, Pros, and Cons}
+\end{table}
+       
+\subsection{Figures}
+\begin{figure}[ht]
+    \centering
+    % First Image
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{image1.jpg} 
+      \caption{This is a \emph{\textcolor{purple}{Purple}} flower.}
+        \label{fig:image1}
+    \end{subfigure}
+    \hfill
+    % Second Image
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images.jpg} 
+        \caption{This is a \emph{\textcolor{orange}{Orange}} flower.}
+
+        \label{fig:image2}
+    \end{subfigure}
+    
+    % Main caption for both images
+    \caption{Beautiful flower images}
+    \label{fig:sideBySide}
+\end{figure}
+
+\subsection{Equations and Expressions}
+Here we demonstrate some mathematical expressions.
+% Equation Array
+\begin{align}
+    ax^2 + bx + c = 0
+\end{align}
+
+\begin{align}
+x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{align}
+
+% Summation and Integral
+\[
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2} \quad \int_{0}^{\infty} e^{-x} \, dx = 1
+\]
+\\
+
+%Matrx
+\[
+\begin{bmatrix}
+   a & b \\
+   c & d
+\end{bmatrix}   
+\]
+
+
+\chapter{\textcolor{cyan}{Summary}}
+In summary, LaTeX is an invaluable tool for creating well-structured and visually appealing documents, particularly in academic and professional settings. Its ability to handle complex formatting, including mathematical expressions, tables, and references, sets it apart from standard word processors. The separation of content and formatting enables authors to focus on their writing while maintaining a consistent and polished appearance. Additionally, the extensive library of packages enhances its functionality, allowing for customized layouts and styles. Overall, LaTeX empowers users to produce high-quality publications that meet rigorous academic standards, making it a preferred choice for researchers and scholars worldwide.
+
+\newpage
+\chapter{\textcolor{cyan}{References}}
+This is my first reference \citep{knuth1984} \\
+This is my first reference \citep{lamport1994} 
+
+\bibliographystyle{plainnat}
+\bibliography{name}
+
+\end{document}
